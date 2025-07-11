@@ -5,15 +5,17 @@ import (
 	"time"
 )
 
+
 func Some(data string) {
 	fmt.Println(data)
 }
 
+
 func main() {
 
 	go Some("1")
-	go Some("2")
-	go Some("3")
 
-	fmt.Println("Hello")
+	time.Sleep(time.Second * 1) // that is know as fork-join model
+
+	fmt.Println("End")
 }
